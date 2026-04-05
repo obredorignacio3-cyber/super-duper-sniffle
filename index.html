@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Templates Portfolio | Premium Landing Pages</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #0f172a; color: white; line-height: 1.6; }
+    .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+    header { text-align: center; padding: 60px 20px; }
+    h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 5vw, 42px); margin-bottom: 15px; }
+    .subtitle { color: #94a3b8; font-size: 18px; max-width: 600px; margin: 0 auto 40px; }
+    
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px; }
+    .card {
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #334155;
+    }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); border-color: #64748b; }
+    .card-badge {
+      display: inline-block;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .badge-injury { background: #ef4444; color: white; }
+    .badge-family { background: #8b5cf6; color: white; }
+    .badge-employment { background: #10b981; color: white; }
+    
+    .card h3 { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; }
+    .card p { color: #94a3b8; font-size: 14px; margin-bottom: 20px; }
+    
+    .features { list-style: none; margin-bottom: 20px; }
+    .features li { 
+      font-size: 13px; 
+      color: #cbd5e1; 
+      padding: 4px 0; 
+      display: flex; 
+      align-items: center; 
+      gap: 8px; 
+    }
+    .features li::before { content: "✓"; color: #22c55e; font-weight: bold; }
+    
+    .btn {
+      display: inline-block;
+      background: #3b82f6;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.3s ease;
+      width: 100%;
+      text-align: center;
+    }
+    .btn:hover { background: #2563eb; }
+    
+    .footer { text-align: center; padding: 40px 20px; color: #64748b; font-size: 14px; border-top: 1px solid #334155; margin-top: 60px; }
+    
+    @media (max-width: 600px) {
+      header { padding: 40px 20px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Legal Templates Portfolio</h1>
+      <p class="subtitle">Premium landing pages designed for law firms. Fully responsive, conversion-optimized, and ready to customize.</p>
+    </header>
+
+    <div class="grid">
+      <!-- Personal Injury -->
+      <div class="card">
+        <span class="card-badge badge-injury">🚗 Personal Injury</span>
+        <h3>RoadRight Law</h3>
+        <p>High-conversion template for accident & injury attorneys. Urgency-focused design with 24/7 CTAs.</p>
+        <ul class="features">
+          <li>No Win, No Fee badge</li>
+          <li>Emergency call button</li>
+          <li>Case type selector</li>
+          <li>Exit-intent lead capture</li>
+        </ul>
+        <a href="./personal-injury/" class="btn">View Demo →</a>
+      </div>
+
+      <!-- Family Law -->
+      <div class="card">
+        <span class="card-badge badge-family">💔 Family Law</span>
+        <h3>Serene Family Law</h3>
+        <p>Empathetic design for divorce & custody attorneys. Trust-building elements and confidential intake.</p>
+        <ul class="features">
+          <li>Compassionate copywriting</li>
+          <li>Mediation-first messaging</li>
+          <li>Confidentiality badges</li>
+          <li>Team showcase section</li>
+        </ul>
+        <a href="./family-law/" class="btn">View Demo →</a>
+      </div>
+
+      <!-- Employment Law -->
+      <div class="card">
+        <span class="card-badge badge-employment">💼 Employment Law</span>
+        <h3>WorkRight Legal</h3>
+        <p>Worker-focused template for employment attorneys. Rights education + urgency for statute deadlines.</p>
+        <ul class="features">
+          <li>"Know Your Rights" section</li>
+          <li>Deadline urgency messaging</li>
+          <li>Wage claim calculator ready</li>
+          <li>Whistleblower protection focus</li>
+        </ul>
+        <a href="./employment-law/" class="btn">View Demo →</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>© <span id="year"></span> Legal Templates Portfolio • Built for conversion • <a href="https://github.com/tuusuario/law-portfolio" style="color:#64748b;">View Code</a></p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
