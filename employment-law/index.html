@@ -3,955 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WorkRight Legal | Employment Law Attorneys</title>
-  <meta name="description" content="Fighting for workers' rights. Wrongful termination, discrimination, wage theft, harassment. Free case review.">
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LegalService",
-    "name": "WorkRight Legal",
-    "specialty": "Employment Law",
-    "areaServed": "United States",
-    "description": "Protecting employees from workplace injustice"
-  }
-  </script>
+  <title>WorkRight Legal | Employment Lawyers</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  
+  <meta name="description" content="Fired, harassed, or underpaid? You may be entitled to compensation. Free case review.">
+
   <style>
-    :root {
-      --primary: #2a9d8f; /* Verde confianza */
-      --primary-dark: #227c70;
-      --secondary: #1d3557;
-      --accent: #e76f51;
-      --light: #f8f9fa;
-      --white: #ffffff;
-      --shadow: 0 4px 20px rgba(0,0,0,0.1);
-      --transition: all 0.3s ease;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; color: var(--secondary); line-height: 1.6; }
-    .container { max-width: 1200px; margin: auto; padding: 0 20px; }
-    .section { padding: 80px 0; }
-    .section-title { 
-      text-align: center; 
-      font-family: 'Playfair Display', serif; 
-      font-size: 36px; 
-      margin-bottom: 50px;
-      position: relative;
-    }
-    .section-title::after {
-      content: ''; display: block; width: 60px; height: 3px; 
-      background: var(--primary); margin: 15px auto 0;
+    :root{
+      --primary:#10b981;
+      --dark:#1f2937;
     }
 
-    /* HERO */
-    .hero {
-      background: linear-gradient(rgba(29,53,87,0.9), rgba(42,157,143,0.85)), 
-                url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600') center/cover;
-      color: var(--white);
-      padding: 140px 20px 100px;
-      text-align: center;
-    }
-    .hero h1 { 
-      font-family: 'Playfair Display', serif; 
-      font-size: clamp(32px, 5vw, 48px); 
-      margin-bottom: 20px;
-      animation: fadeInUp 0.8s ease;
-    }
-    .hero p { 
-      font-size: clamp(16px, 2vw, 18px); 
-      margin: 0 auto 30px; 
-      max-width: 650px;
-      animation: fadeInUp 0.8s ease 0.2s backwards;
-      opacity: 0.95;
-    }
-    .btn {
-      background: var(--primary);
-      padding: 16px 40px;
-      color: white;
-      font-weight: 600;
-      border-radius: 5px;
-      display: inline-block;
-      transition: var(--transition);
-      border: none;
-      cursor: pointer;
-      animation: fadeInUp 0.8s ease 0.4s backwards;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-size: 14px;
-    }
-    .btn:hover { 
-      background: var(--primary-dark); 
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(42, 157, 143, 0.4);
-    }
-    .btn-outline {
-      background: transparent;
-      border: 2px solid white;
-      color: white;
-      margin-left: 15px;
-    }
-    .btn-outline:hover { background: white; color: var(--secondary); }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:sans-serif;color:var(--dark);}
 
-    /* BADGE */
-    .workers-badge {
-      background: linear-gradient(135deg, var(--accent), #e95840);
-      color: white;
-      padding: 8px 20px;
-      border-radius: 50px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 600;
-      font-size: 14px;
-      margin-bottom: 25px;
-      animation: pulse 2s infinite;
+    .container{max-width:1000px;margin:auto;padding:20px;}
+
+    .hero{
+      background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
+      url('https://images.unsplash.com/photo-1556761175-4b46a572b786?w=1200&q=80') center/cover;
+      color:white;
+      text-align:center;
+      padding:120px 20px;
     }
 
-    /* STATS */
-    .stats {
-      background: var(--secondary);
-      color: white;
-      padding: 40px 0;
-    }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 30px;
-      text-align: center;
-    }
-    .stat-number {
-      font-size: 36px;
-      font-weight: 600;
-      color: var(--primary);
-      display: block;
-    }
-    .stat-label { font-size: 14px; opacity: 0.9; }
+    h1{font-size:38px;margin-bottom:15px;}
 
-    /* SERVICES */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: var(--shadow);
-      transition: var(--transition);
-      opacity: 0;
-      transform: translateY(30px);
-      border-left: 4px solid var(--primary);
-    }
-    .card.visible { opacity: 1; transform: translateY(0); }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
-    .card h3 {
-      font-family: 'Playfair Display', serif;
-      margin: 15px 0;
-      color: var(--secondary);
-    }
-    .card-icon {
-      font-size: 32px;
-      margin-bottom: 15px;
-      display: block;
-      color: var(--primary);
+    .btn{
+      background:var(--primary);
+      color:white;
+      padding:14px 25px;
+      border-radius:6px;
+      text-decoration:none;
+      display:inline-block;
+      margin-top:10px;
     }
 
-    /* RIGHTS SECTION */
-    .rights { background: var(--light); }
-    .rights-list {
-      max-width: 800px;
-      margin: 40px auto 0;
-      display: grid;
-      gap: 15px;
-    }
-    .right-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 15px;
-      padding: 15px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-    }
-    .right-check {
-      color: var(--primary);
-      font-size: 20px;
-      font-weight: bold;
-      min-width: 24px;
+    .section{padding:60px 0;}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
     }
 
-    /* TESTIMONIALS */
-    .testimonials { background: white; }
-    .carousel {
-      max-width: 750px;
-      margin: auto;
-      position: relative;
-      overflow: hidden;
-      padding: 20px;
-    }
-    .testimonial-slide {
-      text-align: center;
-      padding: 20px;
-      display: none;
-      animation: fadeIn 0.5s ease;
-    }
-    .testimonial-slide.active { display: block; }
-    .stars { color: #ffc107; font-size: 22px; margin-bottom: 15px; }
-    .testimonial-text {
-      font-size: 18px;
-      font-style: italic;
-      margin-bottom: 20px;
-      color: #444;
-    }
-    .carousel-controls {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 20px;
-    }
-    .carousel-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: #ccc;
-      cursor: pointer;
-      transition: var(--transition);
-    }
-    .carousel-dot.active { background: var(--primary); }
-
-    /* CONTACT */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 50px;
-    }
-    .form input,
-    .form textarea,
-    .form select {
-      width: 100%;
-      padding: 14px;
-      margin: 8px 0 20px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      font-family: inherit;
-      transition: var(--transition);
-    }
-    .form input:focus,
-    .form textarea:focus,
-    .form select:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.2);
-    }
-    .form .error {
-      color: #e63946;
-      font-size: 14px;
-      margin-top: -15px;
-      margin-bottom: 15px;
-      display: none;
-    }
-    .form .error.show { display: block; }
-    .form-success {
-      display: none;
-      background: #d4edda;
-      color: #155724;
-      padding: 15px;
-      border-radius: 5px;
-      margin-bottom: 20px;
-      animation: slideIn 0.4s ease;
-    }
-    .form-success.show { display: block; }
-
-    /* FLOATING */
-    .sticky-call {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: var(--primary);
-      color: white;
-      padding: 15px 25px;
-      border-radius: 50px;
-      font-weight: 600;
-      box-shadow: 0 5px 25px rgba(42, 157, 143, 0.5);
-      z-index: 999;
-      display: none;
-      align-items: center;
-      gap: 10px;
-      transition: var(--transition);
-      animation: pulse 2s infinite;
-      text-decoration: none;
-    }
-    .sticky-call.show { display: flex; }
-    .sticky-call:hover { 
-      background: var(--primary-dark); 
-      transform: scale(1.05);
-      animation: none;
+    .card{
+      background:white;
+      padding:20px;
+      border-radius:10px;
+      box-shadow:0 5px 20px rgba(0,0,0,.1);
     }
 
-    /* CHAT */
-    .chat-widget {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      z-index: 999;
-    }
-    .chat-toggle {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: var(--primary);
-      border: none;
-      color: white;
-      font-size: 24px;
-      cursor: pointer;
-      box-shadow: 0 5px 20px rgba(42, 157, 143, 0.4);
-      transition: var(--transition);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .chat-toggle:hover { transform: scale(1.1); }
-    .chat-box {
-      position: absolute;
-      bottom: 80px;
-      left: 0;
-      width: 320px;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-      overflow: hidden;
-      display: none;
-      flex-direction: column;
-      animation: slideUp 0.3s ease;
-    }
-    .chat-box.show { display: flex; }
-    .chat-header {
-      background: var(--secondary);
-      color: white;
-      padding: 15px 20px;
-      font-weight: 600;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .chat-close { background: none; border: none; color: white; font-size: 20px; cursor: pointer; }
-    .chat-body {
-      padding: 20px;
-      max-height: 300px;
-      overflow-y: auto;
-      font-size: 14px;
-    }
-    .chat-message {
-      background: var(--light);
-      padding: 12px 15px;
-      border-radius: 10px;
-      margin-bottom: 10px;
-      margin-right: 40px;
-    }
-    .chat-message.bot { margin-left: 40px; margin-right: 0; background: #e8f5f4; }
-    .chat-footer {
-      padding: 15px;
-      border-top: 1px solid #eee;
-      display: flex;
-      gap: 10px;
-    }
-    .chat-footer input {
-      flex: 1;
-      padding: 10px 15px;
-      border: 1px solid #ddd;
-      border-radius: 25px;
-      outline: none;
-    }
-    .chat-footer button {
-      background: var(--primary);
-      border: none;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      cursor: pointer;
-      color: white;
-      transition: var(--transition);
-    }
-    .chat-footer button:hover { background: var(--primary-dark); }
-
-    /* MODAL */
-    .modal {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.75);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 2000;
-      padding: 20px;
-      animation: fadeIn 0.3s ease;
-    }
-    .modal.show { display: flex; }
-    .modal-content {
-      background: white;
-      border-radius: 15px;
-      max-width: 500px;
-      width: 100%;
-      padding: 30px;
-      position: relative;
-      animation: slideIn 0.4s ease;
-      text-align: center;
-    }
-    .modal-close {
-      position: absolute;
-      top: 15px; right: 20px;
-      font-size: 24px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: #999;
-    }
-    .modal h3 {
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 15px;
-      color: var(--secondary);
-    }
-    .modal-highlight {
-      background: #e8f5f4;
-      color: var(--primary-dark);
-      padding: 10px;
-      border-radius: 5px;
-      margin: 15px 0;
-      font-weight: 500;
+    input,textarea{
+      width:100%;
+      padding:12px;
+      margin:10px 0;
+      border:1px solid #ccc;
+      border-radius:5px;
     }
 
-    /* FOOTER */
-    footer {
-      background: var(--secondary);
-      color: rgba(255,255,255,0.85);
-      padding: 60px 0 30px;
-      font-size: 14px;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 40px;
-      margin-bottom: 40px;
-    }
-    .footer-col h4 {
-      color: white;
-      margin-bottom: 20px;
-      font-family: 'Playfair Display', serif;
-    }
-    .footer-col ul { list-style: none; }
-    .footer-col li { margin-bottom: 10px; }
-    .footer-col a:hover { color: var(--primary); }
-    .rights-banner {
-      background: var(--primary);
-      color: white;
-      padding: 15px;
-      border-radius: 8px;
-      text-align: center;
-      margin-top: 20px;
-      font-weight: 500;
-    }
-
-    /* ANIMATIONS */
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes slideIn { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(42, 157, 143, 0.6); }
-      70% { box-shadow: 0 0 0 15px rgba(42, 157, 143, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(42, 157, 143, 0); }
-    }
-
-    @media (max-width: 768px) {
-      .hero { padding: 120px 20px 80px; }
-      .section { padding: 60px 0; }
-      .btn-outline { margin-left: 0; margin-top: 15px; display: block; }
-      .chat-box { width: calc(100vw - 40px); }
+    footer{
+      background:var(--dark);
+      color:white;
+      text-align:center;
+      padding:30px;
     }
   </style>
 </head>
+
 <body>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="workers-badge">✊ Your Rights Matter • Free Case Review</div>
-    <h1>Fighting for Workers. Holding Employers Accountable.</h1>
-    <p>Wrongful termination, discrimination, unpaid wages, harassment — if your workplace rights were violated, we're here to help. No fees unless we win.</p>
-    <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
-      <a href="#contact" class="btn">🆓 Free Case Review</a>
-      <a href="#rights" class="btn btn-outline">📋 Know Your Rights</a>
-    </div>
-  </section>
+<section class="hero">
+  <h1>Fired, Harassed, or Underpaid?</h1>
+  <p>You may be entitled to compensation. Know your rights today.</p>
+  <a href="#contact" class="btn">Free Case Review</a>
+</section>
 
-  <!-- STATS -->
-  <div class="stats">
-    <div class="container stats-grid">
-      <div>
-        <span class="stat-number" data-count="1240">0</span>
-        <span class="stat-label">Workers Helped</span>
-      </div>
-      <div>
-        <span class="stat-number" data-count="38">0</span>
-        <span class="stat-label">$M Recovered</span>
-      </div>
-      <div>
-        <span class="stat-number" data-count="92">0</span>
-        <span class="stat-label">% Success Rate</span>
-      </div>
-      <div>
-        <span class="stat-number" data-count="48">0</span>
-        <span class="stat-label">Hr Response</span>
-      </div>
+<section class="section">
+  <div class="container">
+    <h2>Your Rights Matter</h2>
+    <div class="grid">
+      <div class="card">⚖️ Wrongful Termination</div>
+      <div class="card">💰 Unpaid Wages</div>
+      <div class="card">🚫 Workplace Harassment</div>
+      <div class="card">📢 Whistleblower Protection</div>
     </div>
   </div>
+</section>
 
-  <!-- SERVICES -->
-  <section class="section" id="services">
-    <div class="container">
-      <h2 class="section-title">Employment Law Areas</h2>
-      <div class="services-grid">
-        <div class="card fade-on-scroll">
-          <span class="card-icon">🚫</span>
-          <h3>Wrongful Termination</h3>
-          <p>Fired for reporting misconduct, taking protected leave, or for discriminatory reasons? We investigate and fight for reinstatement or compensation.</p>
-        </div>
-        <div class="card fade-on-scroll">
-          <span class="card-icon">⚖️</span>
-          <h3>Workplace Discrimination</h3>
-          <p>Based on race, gender, age, disability, religion, or other protected classes. We hold employers accountable under federal and state laws.</p>
-        </div>
-        <div class="card fade-on-scroll">
-          <span class="card-icon">💰</span>
-          <h3>Wage & Hour Claims</h3>
-          <p>Unpaid overtime, misclassified as exempt, off-the-clock work, tip theft. We recover what you're owed — plus penalties.</p>
-        </div>
-        <div class="card fade-on-scroll">
-          <span class="card-icon">🗣️</span>
-          <h3>Harassment & Retaliation</h3>
-          <p>Hostile work environment, sexual harassment, or punishment for speaking up. We protect your right to a safe workplace.</p>
-        </div>
-        <div class="card fade-on-scroll">
-          <span class="card-icon">📋</span>
-          <h3>Whistleblower Protection</h3>
-          <p>Reported illegal or unsafe practices? We defend employees against retaliation under federal and state whistleblower laws.</p>
-        </div>
-        <div class="card fade-on-scroll">
-          <span class="card-icon">🤝</span>
-          <h3>Severance Review</h3>
-          <p>Don't sign a severance agreement without legal review. We negotiate better terms and protect your future rights.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- RIGHTS -->
-  <section class="section rights" id="rights">
-    <div class="container">
-      <h2 class="section-title">You Have Rights at Work</h2>
-      <div class="rights-list">
-        <div class="right-item fade-on-scroll">
-          <span class="right-check">✓</span>
-          <div><strong>Right to fair pay:</strong> Minimum wage, overtime, and timely payment are legally required.</div>
-        </div>
-        <div class="right-item fade-on-scroll">
-          <span class="right-check">✓</span>
-          <div><strong>Right to a safe workplace:</strong> Employers must provide a workplace free from recognized hazards.</div>
-        </div>
-        <div class="right-item fade-on-scroll">
-          <span class="right-check">✓</span>
-          <div><strong>Right to be free from discrimination:</strong> Hiring, promotion, and termination decisions cannot be based on protected characteristics.</div>
-        </div>
-        <div class="right-item fade-on-scroll">
-          <span class="right-check">✓</span>
-          <div><strong>Right to report violations:</strong> You cannot be retaliated against for reporting illegal activity or safety concerns.</div>
-        </div>
-        <div class="right-item fade-on-scroll">
-          <span class="right-check">✓</span>
-          <div><strong>Right to organize:</strong> You can discuss wages, working conditions, and join or support a union.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="section testimonials" id="testimonials">
-    <div class="container">
-      <h2 class="section-title">Workers We've Helped</h2>
-      <div class="carousel">
-        <div class="testimonial-slide active">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-text">"After reporting safety violations, I was fired within a week. WorkRight proved retaliation and got me back pay plus damages."</p>
-          <small>— Carlos M., Warehouse Worker</small>
-        </div>
-        <div class="testimonial-slide">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-text">"I was denied overtime for years because they called me 'exempt.' They recovered $47,000 in unpaid wages for me and my coworkers."</p>
-          <small>— Priya S., Retail Manager</small>
-        </div>
-        <div class="testimonial-slide">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-text">"When I was passed over for promotion due to my age, WorkRight fought for me. Settlement included promotion and back pay."</p>
-          <small>— Robert J., Senior Engineer</small>
-        </div>
-        <div class="carousel-controls">
-          <span class="carousel-dot active" data-slide="0"></span>
-          <span class="carousel-dot" data-slide="1"></span>
-          <span class="carousel-dot" data-slide="2"></span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section" id="contact" style="background: var(--light);">
-    <div class="container">
-      <h2 class="section-title">Free Confidential Case Review</h2>
-      <div class="contact-grid">
-        <div>
-          <form class="form" id="consultationForm" action="https://formspree.io/f/your-id" method="POST" novalidate>
-            <div class="form-success" id="formSuccess">
-              ✓ Thank you. An employment attorney will contact you within 48 hours.
-            </div>
-            <input type="text" name="name" placeholder="Full Name *" required data-error="Please enter your name">
-            <div class="error" id="nameError"></div>
-            
-            <input type="email" name="email" placeholder="Email Address *" required data-error="Please enter a valid email">
-            <div class="error" id="emailError"></div>
-            
-            <input type="tel" name="phone" placeholder="Phone Number" pattern="[0-9\-\+\(\)\s]{10,}">
-            
-            <select name="issue_type" required data-error="Please select your issue">
-              <option value="">What Happened? *</option>
-              <option value="wrongful-termination">Wrongful Termination</option>
-              <option value="discrimination">Discrimination / Harassment</option>
-              <option value="wage-theft">Unpaid Wages / Overtime</option>
-              <option value="retaliation">Retaliation / Whistleblower</option>
-              <option value="severance">Severance Agreement Review</option>
-              <option value="other">Other Workplace Issue</option>
-            </select>
-            <div class="error" id="issueError"></div>
-            
-            <textarea name="details" rows="4" placeholder="Briefly describe what happened *" required data-error="Please describe the situation"></textarea>
-            <div class="error" id="detailsError"></div>
-            
-            <button type="submit" class="btn" style="width:100%;">🆓 Get My Free Review</button>
-            <p style="font-size:12px; color:#666; margin-top:15px; text-align:center;">
-              🔒 100% Confidential • No fees unless we win • No obligation
-            </p>
-          </form>
-        </div>
-        <div>
-          <div style="background:white; padding:25px; border-radius:10px; box-shadow: var(--shadow);">
-            <h3 style="font-family:'Playfair Display'; margin-bottom:20px;">⚠️ Act Quickly</h3>
-            <p style="margin-bottom:20px;">Employment claims have strict deadlines (statutes of limitations). Don't wait to protect your rights.</p>
-            
-            <div style="border-top:1px solid #eee; padding-top:20px;">
-              <p><strong>📍 Office:</strong><br>789 Worker's Way, Suite 200<br>Denver, CO 80202</p>
-              <p style="margin-top:15px;"><strong>🕐 Consultations:</strong><br>Mon-Fri: 8AM - 7PM<br>Weekend slots for urgent cases</p>
-              <p style="margin-top:15px;"><strong>📞 Call Direct:</strong><br><a href="tel:+13035551776" style="color:var(--primary); font-weight:600;">(303) 555-1776</a></p>
-            </div>
-            
-            <div class="rights-banner">
-              💡 Tip: Save copies of emails, performance reviews, and witness contacts. Documentation strengthens your case.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>WorkRight Legal</h4>
-          <p style="opacity:0.9; line-height:1.8;">Dedicated to protecting employees' rights across the United States. No win, no fee.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Practice Areas</h4>
-          <ul>
-            <li><a href="#">Wrongful Termination</a></li>
-            <li><a href="#">Discrimination</a></li>
-            <li><a href="#">Wage Claims</a></li>
-            <li><a href="#">Whistleblower</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li>📞 (303) 555-1776</li>
-            <li>📧 help@workrightlegal.com</li>
-            <li>📍 Denver, CO</li>
-          </ul>
-        </div>
-      </div>
-      <p style="text-align:center; opacity:0.7; font-size:13px;">
-        &copy; <span id="year"></span> WorkRight Legal. All Rights Reserved.<br>
-        <small style="opacity:0.6;">Attorney Advertising. Results vary by case.</small>
-      </p>
-    </div>
-  </footer>
-
-  <!-- FLOATING -->
-  <a href="tel:+13035551776" class="sticky-call" id="stickyCall">
-    📞 Call: (303) 555-1776
-  </a>
-
-  <div class="chat-widget">
-    <button class="chat-toggle" id="chatToggle">💬</button>
-    <div class="chat-box" id="chatBox">
-      <div class="chat-header">
-        <span>Live Chat • Worker Rights</span>
-        <button class="chat-close" id="chatClose">×</button>
-      </div>
-      <div class="chat-body" id="chatBody">
-        <div class="chat-message bot">
-          Hi, I'm Jordan from WorkRight. 👋<br>
-          <strong>What's happening at your workplace?</strong><br>
-          <small style="color:#666; display:block; margin-top:8px;">Confidential • No obligation</small>
-        </div>
-      </div>
-      <div class="chat-footer">
-        <input type="text" id="chatInput" placeholder="Type your message...">
-        <button id="chatSend">➤</button>
-      </div>
+<section class="section" style="background:#f3f4f6;">
+  <div class="container">
+    <h2>Why Choose Us</h2>
+    <div class="grid">
+      <div class="card">✔️ Aggressive Representation</div>
+      <div class="card">✔️ Fast Case Review</div>
+      <div class="card">✔️ No Upfront Fees</div>
     </div>
   </div>
+</section>
 
-  <!-- EXIT MODAL -->
-  <div class="modal" id="exitModal">
-    <div class="modal-content">
-      <button class="modal-close" id="modalClose">×</button>
-      <h3>⚠️ Don't Lose Your Rights</h3>
-      <p style="margin-bottom:20px; color:#555;">
-        Many workplace claims expire in as little as 180 days. 
-        <strong>Get clarity before it's too late.</strong>
-      </p>
-      <div class="modal-highlight">
-        📘 Free Checklist: "5 Steps to Protect Your Employment Rights"
-      </div>
-      <form id="modalForm" style="display:flex; flex-direction:column; gap:12px;">
-        <input type="text" placeholder="Your Name" required style="padding:12px; border:1px solid #ddd; border-radius:5px;">
-        <input type="email" placeholder="Your Email" required style="padding:12px; border:1px solid #ddd; border-radius:5px;">
-        <button type="submit" class="btn" style="width:100%;">📩 Send Me the Checklist</button>
-      </form>
-      <p style="font-size:12px; color:#999; margin-top:15px;">
-        We never share your info. Unsubscribe anytime.
-      </p>
-    </div>
+<section class="section" id="contact">
+  <div class="container">
+    <h2>Start Your Case</h2>
+
+    <form action="https://formspree.io/f/your-id" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Describe your situation" required></textarea>
+      <button class="btn">Get Free Review</button>
+    </form>
+
+    <p style="font-size:12px;">🔒 100% Confidential</p>
   </div>
+</section>
 
-  <!-- JAVASCRIPT -->
-  <script>
-    // ===== CONTENT =====
-    const siteContent = {
-      "hero-title": "Fighting for Workers. Holding Employers Accountable.",
-      "hero-subtitle": "Wrongful termination, discrimination, unpaid wages, harassment — if your workplace rights were violated, we're here to help. No fees unless we win.",
-      "services-title": "Employment Law Areas",
-      "rights-title": "You Have Rights at Work"
-    };
+<footer>
+  © 2026 WorkRight Legal
+</footer>
 
-    const $ = (sel, ctx = document) => ctx.querySelector(sel);
-    const $$ = (sel, ctx = document) => ctx.querySelectorAll(sel);
-    
-    function trackEvent(eventName, params = {}) {
-      if (typeof gtag !== 'undefined') gtag('event', eventName, { ...params });
-      console.log(`[GA4] ${eventName}`, params);
-    }
-
-    function loadContent() {
-      Object.entries(siteContent).forEach(([key, value]) => {
-        const el = $(`[data-content="${key}"]`);
-        if (el) el.textContent = value;
-      });
-    }
-
-    // ===== FADE ON SCROLL =====
-    const fadeObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          fadeObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    
-    function initFadeAnimations() {
-      $$('.fade-on-scroll').forEach(el => fadeObserver.observe(el));
-    }
-
-    // ===== COUNTERS =====
-    function animateCounters() {
-      $$('.stat-number').forEach(el => {
-        const target = +el.dataset.count;
-        const isPercent = target === 92;
-        const isMoney = target === 38;
-        const duration = 2000;
-        const increment = target / (duration / 16);
-        let current = 0;
-        
-        const update = () => {
-          current += increment;
-          if (current < target) {
-            el.textContent = isMoney ? '$' + Math.floor(current) : Math.floor(current).toLocaleString();
-            requestAnimationFrame(update);
-          } else {
-            el.textContent = isMoney ? '$' + target + 'M' : isPercent ? target + '%' : target.toLocaleString() + (target>100?'+':'');
-          }
-        };
-        
-        const obs = new IntersectionObserver((entries) => {
-          if (entries[0].isIntersecting) { update(); obs.disconnect(); }
-        }, { threshold: 0.5 });
-        obs.observe(el);
-      });
-    }
-
-    // ===== STICKY CALL =====
-    function initSticky() {
-      window.addEventListener('scroll', () => {
-        const el = $('#stickyCall');
-        if (window.innerWidth <= 768) {
-          if (window.scrollY > 300) el.classList.add('show');
-          else el.classList.remove('show');
-        }
-      });
-    }
-
-    // ===== CAROUSEL =====
-    function initCarousel() {
-      const slides = $$('.testimonial-slide'), dots = $$('.carousel-dot');
-      let current = 0, interval;
-      
-      const show = (i) => {
-        slides.forEach(s => s.classList.remove('active'));
-        dots.forEach(d => d.classList.remove('active'));
-        slides[i].classList.add('active');
-        dots[i].classList.add('active');
-        current = i;
-      };
-      
-      const next = () => show((current + 1) % slides.length);
-      
-      dots.forEach(dot => {
-        dot.addEventListener('click', () => { show(+dot.dataset.slide); reset(); });
-      });
-      
-      const start = () => interval = setInterval(next, 6000);
-      const reset = () => { clearInterval(interval); start(); };
-      
-      $('.carousel').addEventListener('mouseenter', () => clearInterval(interval));
-      $('.carousel').addEventListener('mouseleave', start);
-      start();
-    }
-
-    // ===== FORM =====
-    function initForm() {
-      const form = $('#consultationForm'), success = $('#formSuccess');
-      
-      const validate = (field) => {
-        const err = $(`#${field.name}Error`);
-        const msg = field.dataset.error || 'Required';
-        if (field.required && !field.value.trim()) {
-          err.textContent = msg; err.classList.add('show'); return false;
-        }
-        if (field.type==='email' && field.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) {
-          err.textContent = 'Invalid email'; err.classList.add('show'); return false;
-        }
-        err?.classList.remove('show'); return true;
-      };
-      
-      $$('#consultationForm [required]').forEach(f => {
-        f.addEventListener('blur', () => validate(f));
-        f.addEventListener('input', () => $(`#${f.name}Error`)?.classList.remove('show'));
-      });
-      
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        let ok = true; $$('#consultationForm [required]').forEach(f => { if(!validate(f)) ok=false; });
-        if(!ok) return;
-        
-        trackEvent('form_submit', { issue: form.querySelector('[name="issue_type"]').value });
-        
-        const btn = form.querySelector('button[type="submit"]');
-        const orig = btn.textContent;
-        btn.textContent = 'Sending...'; btn.disabled = true;
-        
-        try {
-          await new Promise(r => setTimeout(r, 1500));
-          success.classList.add('show'); form.reset();
-          trackEvent('form_success');
-          setTimeout(() => success.classList.remove('show'), 6000);
-        } catch { alert('Error. Please call (303) 555-1776.'); }
-        finally { btn.textContent = orig; btn.disabled = false; }
-      });
-    }
-
-    // ===== CHAT =====
-    function initChat() {
-      const toggle = $('#chatToggle'), box = $('#chatBox'), close = $('#chatClose');
-      const input = $('#chatInput'), send = $('#chatSend'), body = $('#chatBody');
-      
-      const toggleChat = () => box.classList.toggle('show');
-      toggle.addEventListener('click', toggleChat);
-      close.addEventListener('click', toggleChat);
-      
-      const add = (text, bot=false) => {
-        const d = document.createElement('div');
-        d.className = `chat-message ${bot?'bot':''}`; d.innerHTML = text;
-        body.appendChild(d); body.scrollTop = body.scrollHeight;
-      };
-      
-      const handle = () => {
-        const t = input.value.trim(); if(!t) return;
-        add(t); input.value='';
-        setTimeout(() => {
-          const r = [
-            "Thanks. An employment attorney will review your case and call within 48 hours.",
-            "I understand. Could you share when the incident occurred? Timing matters for legal deadlines.",
-            "We're here to help. Would you prefer to schedule a call instead?"
-          ];
-          add(r[Math.floor(Math.random()*r.length)], true);
-        }, 1200);
-        trackEvent('chat_sent');
-      };
-      
-      send.addEventListener('click', handle);
-      input.addEventListener('keypress', e => { if(e.key==='Enter') handle(); });
-    }
-
-    // ===== EXIT MODAL =====
-    function initExitModal() {
-      const modal = $('#exitModal'), close = $('#modalClose'), form = $('#modalForm');
-      let shown = false;
-      
-      const show = () => { if(shown) return; modal.classList.add('show'); shown=true; trackEvent('exit_modal'); };
-      
-      document.addEventListener('mouseleave', e => { if(e.clientY<=0 && window.innerWidth>768) show(); });
-      setTimeout(() => { if(!shown && document.visibilityState==='visible') show(); }, 35000);
-      
-      close.addEventListener('click', () => { modal.classList.remove('show'); trackEvent('exit_modal_close'); });
-      modal.addEventListener('click', e => { if(e.target===modal) modal.classList.remove('show'); });
-      
-      form.addEventListener('submit', (e) => {
-        e.preventDefault(); trackEvent('exit_checklist_download');
-        form.innerHTML = `<div style="padding:30px;"><div style="font-size:40px;margin-bottom:15px;">✓</div><strong>Check your email!</strong><br><small style="color:#666;">Your free checklist is on the way.</small></div>`;
-      });
-    }
-
-    // ===== INIT =====
-    document.addEventListener('DOMContentLoaded', () => {
-      $('#year').textContent = new Date().getFullYear();
-      loadContent(); initFadeAnimations(); animateCounters();
-      initSticky(); initCarousel(); initForm(); initChat(); initExitModal();
-      trackEvent('page_view', { niche: 'employment_law' });
-    });
-  </script>
 </body>
 </html>
