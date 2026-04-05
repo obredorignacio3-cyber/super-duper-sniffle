@@ -3,1000 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RoadRight Law | Personal Injury Attorneys</title>
-  <meta name="description" content="Injured? Get the compensation you deserve. Free case evaluation. No win, no fee.">
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LegalService",
-    "name": "RoadRight Law",
-    "specialty": "Personal Injury",
-    "areaServed": "United States",
-    "makesOffer": {
-      "@type": "Offer",
-      "description": "Free Case Evaluation • No Win, No Fee"
-    }
-  }
-  </script>
+  <title>Serene Family Law | Divorce & Custody Help</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  
+  <meta name="description" content="Divorce, custody, and family legal help. Confidential consultation. Protect your future today.">
+
   <style>
-    :root {
-      --primary: #e63946; /* Rojo urgencia */
-      --primary-dark: #c1121f;
-      --secondary: #1d3557;
-      --light: #f1faee;
-      --white: #ffffff;
-      --shadow: 0 4px 20px rgba(0,0,0,0.1);
-      --transition: all 0.3s ease;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; color: var(--secondary); line-height: 1.6; }
-    .container { max-width: 1200px; margin: auto; padding: 0 20px; }
-    .section { padding: 80px 0; }
-    .section-title { 
-      text-align: center; 
-      font-family: 'Playfair Display', serif; 
-      font-size: 36px; 
-      margin-bottom: 50px;
-      position: relative;
-    }
-    .section-title::after {
-      content: ''; display: block; width: 60px; height: 3px; 
-      background: var(--primary); margin: 15px auto 0;
+    :root{
+      --primary:#8b5cf6;
+      --dark:#1f2937;
+      --light:#f9fafb;
     }
 
-    /* HERO */
-    .hero {
-      background: linear-gradient(rgba(29,53,87,0.85), rgba(29,53,87,0.9)), 
-                url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1600') center/cover;
-      color: var(--white);
-      padding: 140px 20px 100px;
-      text-align: center;
-    }
-    .hero h1 { 
-      font-family: 'Playfair Display', serif; 
-      font-size: clamp(32px, 5vw, 48px); 
-      margin-bottom: 20px;
-      animation: fadeInUp 0.8s ease;
-    }
-    .hero p { 
-      font-size: clamp(16px, 2vw, 18px); 
-      margin: 0 auto 30px; 
-      max-width: 650px;
-      animation: fadeInUp 0.8s ease 0.2s backwards;
-    }
-    .btn {
-      background: var(--primary);
-      padding: 16px 40px;
-      color: white;
-      font-weight: 600;
-      border-radius: 5px;
-      display: inline-block;
-      transition: var(--transition);
-      border: none;
-      cursor: pointer;
-      animation: fadeInUp 0.8s ease 0.4s backwards;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-size: 14px;
-    }
-    .btn:hover { 
-      background: var(--primary-dark); 
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(230, 57, 70, 0.4);
-    }
-    .btn-outline {
-      background: transparent;
-      border: 2px solid white;
-      color: white;
-      margin-left: 15px;
-    }
-    .btn-outline:hover { background: white; color: var(--secondary); }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:sans-serif;color:var(--dark);}
 
-    /* BADGE NO WIN NO FEE */
-    .no-win-badge {
-      background: linear-gradient(135deg, #ffd166, #ef476f);
-      color: #1a1a1a;
-      padding: 8px 20px;
-      border-radius: 50px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 600;
-      font-size: 14px;
-      margin-bottom: 25px;
-      animation: pulse 2s infinite;
+    .container{max-width:1000px;margin:auto;padding:20px;}
+
+    .hero{
+      background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
+      url('https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1200&q=80') center/cover;
+      color:white;
+      text-align:center;
+      padding:120px 20px;
     }
 
-    /* STATS */
-    .stats {
-      background: var(--secondary);
-      color: white;
-      padding: 40px 0;
-    }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 30px;
-      text-align: center;
-    }
-    .stat-number {
-      font-size: 36px;
-      font-weight: 600;
-      color: var(--primary);
-      display: block;
-    }
-    .stat-label { font-size: 14px; opacity: 0.9; }
+    h1{font-size:38px;margin-bottom:15px;}
+    h2{margin-bottom:20px;}
 
-    /* SERVICES */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: var(--shadow);
-      transition: var(--transition);
-      opacity: 0;
-      transform: translateY(30px);
-      border-left: 4px solid var(--primary);
-    }
-    .card.visible { opacity: 1; transform: translateY(0); }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
-    .card h3 {
-      font-family: 'Playfair Display', serif;
-      margin: 15px 0;
-      color: var(--secondary);
-    }
-    .card-icon {
-      font-size: 32px;
-      margin-bottom: 15px;
-      display: block;
+    .btn{
+      background:var(--primary);
+      color:white;
+      padding:14px 25px;
+      border-radius:6px;
+      text-decoration:none;
+      display:inline-block;
+      margin-top:10px;
     }
 
-    /* PROCESS */
-    .process { background: var(--light); }
-    .process-steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 30px;
-      text-align: center;
-      margin-top: 40px;
-    }
-    .step {
-      padding: 20px;
-    }
-    .step-number {
-      width: 50px;
-      height: 50px;
-      background: var(--primary);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      font-size: 20px;
-      margin: 0 auto 15px;
+    .section{padding:60px 0;}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
     }
 
-    /* TESTIMONIALS */
-    .testimonials { background: white; }
-    .carousel {
-      max-width: 750px;
-      margin: auto;
-      position: relative;
-      overflow: hidden;
-      padding: 20px;
-    }
-    .testimonial-slide {
-      text-align: center;
-      padding: 20px;
-      display: none;
-      animation: fadeIn 0.5s ease;
-    }
-    .testimonial-slide.active { display: block; }
-    .stars { color: #ffc107; font-size: 22px; margin-bottom: 15px; }
-    .testimonial-text {
-      font-size: 18px;
-      font-style: italic;
-      margin-bottom: 20px;
-      color: #444;
-    }
-    .carousel-controls {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 20px;
-    }
-    .carousel-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: #ccc;
-      cursor: pointer;
-      transition: var(--transition);
-    }
-    .carousel-dot.active { background: var(--primary); }
-
-    /* CONTACT */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 50px;
-    }
-    .form input,
-    .form textarea,
-    .form select {
-      width: 100%;
-      padding: 14px;
-      margin: 8px 0 20px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      font-family: inherit;
-      transition: var(--transition);
-    }
-    .form input:focus,
-    .form textarea:focus,
-    .form select:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2);
-    }
-    .form .error {
-      color: #e63946;
-      font-size: 14px;
-      margin-top: -15px;
-      margin-bottom: 15px;
-      display: none;
-    }
-    .form .error.show { display: block; }
-    .form-success {
-      display: none;
-      background: #d4edda;
-      color: #155724;
-      padding: 15px;
-      border-radius: 5px;
-      margin-bottom: 20px;
-      animation: slideIn 0.4s ease;
-    }
-    .form-success.show { display: block; }
-
-    /* FLOATING CALL */
-    .sticky-call {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: var(--primary);
-      color: white;
-      padding: 15px 25px;
-      border-radius: 50px;
-      font-weight: 600;
-      box-shadow: 0 5px 25px rgba(230, 57, 70, 0.5);
-      z-index: 999;
-      display: none;
-      align-items: center;
-      gap: 10px;
-      transition: var(--transition);
-      animation: pulse 2s infinite;
-      text-decoration: none;
-    }
-    .sticky-call.show { display: flex; }
-    .sticky-call:hover { 
-      background: var(--primary-dark); 
-      transform: scale(1.05);
-      animation: none;
+    .card{
+      background:white;
+      padding:20px;
+      border-radius:10px;
+      box-shadow:0 5px 20px rgba(0,0,0,.1);
     }
 
-    /* CHAT */
-    .chat-widget {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      z-index: 999;
-    }
-    .chat-toggle {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: var(--primary);
-      border: none;
-      color: white;
-      font-size: 24px;
-      cursor: pointer;
-      box-shadow: 0 5px 20px rgba(230, 57, 70, 0.4);
-      transition: var(--transition);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .chat-toggle:hover { transform: scale(1.1); }
-    .chat-box {
-      position: absolute;
-      bottom: 80px;
-      left: 0;
-      width: 320px;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-      overflow: hidden;
-      display: none;
-      flex-direction: column;
-      animation: slideUp 0.3s ease;
-    }
-    .chat-box.show { display: flex; }
-    .chat-header {
-      background: var(--secondary);
-      color: white;
-      padding: 15px 20px;
-      font-weight: 600;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .chat-close { background: none; border: none; color: white; font-size: 20px; cursor: pointer; }
-    .chat-body {
-      padding: 20px;
-      max-height: 300px;
-      overflow-y: auto;
-      font-size: 14px;
-    }
-    .chat-message {
-      background: var(--light);
-      padding: 12px 15px;
-      border-radius: 10px;
-      margin-bottom: 10px;
-      margin-right: 40px;
-    }
-    .chat-message.bot { margin-left: 40px; margin-right: 0; background: #ffe8e8; }
-    .chat-footer {
-      padding: 15px;
-      border-top: 1px solid #eee;
-      display: flex;
-      gap: 10px;
-    }
-    .chat-footer input {
-      flex: 1;
-      padding: 10px 15px;
-      border: 1px solid #ddd;
-      border-radius: 25px;
-      outline: none;
-    }
-    .chat-footer button {
-      background: var(--primary);
-      border: none;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      cursor: pointer;
-      color: white;
-      transition: var(--transition);
-    }
-    .chat-footer button:hover { background: var(--primary-dark); }
-
-    /* MODAL */
-    .modal {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.75);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 2000;
-      padding: 20px;
-      animation: fadeIn 0.3s ease;
-    }
-    .modal.show { display: flex; }
-    .modal-content {
-      background: white;
-      border-radius: 15px;
-      max-width: 500px;
-      width: 100%;
-      padding: 30px;
-      position: relative;
-      animation: slideIn 0.4s ease;
-      text-align: center;
-    }
-    .modal-close {
-      position: absolute;
-      top: 15px; right: 20px;
-      font-size: 24px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: #999;
-    }
-    .modal h3 {
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 15px;
-      color: var(--secondary);
-    }
-    .modal-highlight {
-      background: #fff3cd;
-      color: #856404;
-      padding: 10px;
-      border-radius: 5px;
-      margin: 15px 0;
-      font-weight: 500;
+    input,textarea{
+      width:100%;
+      padding:12px;
+      margin:10px 0;
+      border:1px solid #ccc;
+      border-radius:5px;
     }
 
-    /* FOOTER */
-    footer {
-      background: var(--secondary);
-      color: rgba(255,255,255,0.85);
-      padding: 60px 0 30px;
-      font-size: 14px;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 40px;
-      margin-bottom: 40px;
-    }
-    .footer-col h4 {
-      color: white;
-      margin-bottom: 20px;
-      font-family: 'Playfair Display', serif;
-    }
-    .footer-col ul { list-style: none; }
-    .footer-col li { margin-bottom: 10px; }
-    .footer-col a:hover { color: var(--primary); }
-    .emergency-banner {
-      background: var(--primary);
-      color: white;
-      padding: 15px;
-      border-radius: 8px;
-      text-align: center;
-      margin-top: 20px;
-      font-weight: 500;
-    }
-
-    /* ANIMATIONS */
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes slideIn { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.6); }
-      70% { box-shadow: 0 0 0 15px rgba(230, 57, 70, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(230, 57, 70, 0); }
-    }
-
-    @media (max-width: 768px) {
-      .hero { padding: 120px 20px 80px; }
-      .section { padding: 60px 0; }
-      .btn-outline { margin-left: 0; margin-top: 15px; display: block; }
-      .chat-box { width: calc(100vw - 40px); }
+    footer{
+      background:var(--dark);
+      color:white;
+      text-align:center;
+      padding:30px;
     }
   </style>
 </head>
+
 <body>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="no-win-badge">⚖️ No Win, No Fee Guarantee</div>
-    <h1>Injured? We Fight For Your Maximum Compensation</h1>
-    <p>Car accidents, slip & falls, medical malpractice — if someone else was at fault, you deserve justice. Free case evaluation in minutes.</p>
-    <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
-      <a href="#contact" class="btn">🆓 Get Free Evaluation</a>
-      <a href="tel:+18005551234" class="btn btn-outline">📞 Call Now: (800) 555-1234</a>
-    </div>
-  </section>
+<section class="hero">
+  <h1>Divorce & Custody Help Without the Stress</h1>
+  <p>Protect your family, your assets, and your peace of mind. Confidential legal support.</p>
+  <a href="#contact" class="btn">Book Confidential Consultation</a>
+</section>
 
-  <!-- STATS -->
-  <div class="stats">
-    <div class="container stats-grid">
-      <div>
-        <span class="stat-number" data-count="2847">0</span>
-        <span class="stat-label">Cases Won</span>
-      </div>
-      <div>
-        <span class="stat-number" data-count="450">0</span>
-        <span class="stat-label">$M Recovered</span>
-      </div>
-      <div>
-        <span class="stat-number" data-count="96">0</span>
-        <span class="stat-label">% Success Rate</span>
-      </div>
-      <div>
-        <span class="stat-number" data-count="24">0</span>
-        <span class="stat-label">Hrs Response</span>
-      </div>
+<section class="section">
+  <div class="container">
+    <h2>We Help With</h2>
+    <div class="grid">
+      <div class="card">💔 Divorce</div>
+      <div class="card">👶 Child Custody</div>
+      <div class="card">💰 Alimony & Support</div>
+      <div class="card">🤝 Mediation</div>
     </div>
   </div>
+</section>
 
-  <!-- SERVICES -->
-  <section class="section" id="services">
-    <div class="container">
-      <h2 class="section-title">We Handle All Injury Cases</h2>
-      <div class="services-grid">
-        <div class="card fade-on-scroll">
-          <span class="card-icon">🚗</span>
-          <h3>Car & Truck Accidents</h3>
-          <p>From fender-benders to catastrophic collisions. We investigate, gather evidence, and negotiate with insurers so you don't have to.</p>
-        </div>
-        <div class="card fade-on-scroll">
-          <span class="card-icon">🏥</span>
-          <h3>Medical Malpractice</h3>
-          <p>Surgical errors, misdiagnosis, birth injuries — if negligence caused harm, we hold healthcare providers accountable.</p>
-        </div>
-        <div class="card fade-on-scroll">
-          <span class="card-icon">🏗️</span>
-          <h3>Workplace Injuries</h3>
-          <p>Construction accidents, equipment failures, unsafe conditions. We fight for workers' comp AND third-party claims when applicable.</p>
-        </div>
-        <div class="card fade-on-scroll">
-          <span class="card-icon">🚶</span>
-          <h3>Slip & Fall / Premises Liability</h3>
-          <p>Wet floors, poor lighting, uneven surfaces — property owners have a duty to keep you safe. We prove negligence.</p>
-        </div>
-        <div class="card fade-on-scroll">
-          <span class="card-icon">🦮</span>
-          <h3>Wrongful Death</h3>
-          <p>When negligence takes a loved one, we help families seek justice and financial security for the future.</p>
-        </div>
-        <div class="card fade-on-scroll">
-          <span class="card-icon">💊</span>
-          <h3>Product Liability</h3>
-          <p>Defective products, dangerous drugs, faulty equipment — manufacturers must be held responsible for harm caused.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section class="section process">
-    <div class="container">
-      <h2 class="section-title">How We Get You Paid</h2>
-      <div class="process-steps">
-        <div class="step fade-on-scroll">
-          <div class="step-number">1</div>
-          <h4>Free Consultation</h4>
-          <p style="font-size:14px; color:#666;">Tell us what happened. No obligation, no cost.</p>
-        </div>
-        <div class="step fade-on-scroll">
-          <div class="step-number">2</div>
-          <h4>We Investigate</h4>
-          <p style="font-size:14px; color:#666;">Gather evidence, interview witnesses, consult experts.</p>
-        </div>
-        <div class="step fade-on-scroll">
-          <div class="step-number">3</div>
-          <h4>We Negotiate or Litigate</h4>
-          <p style="font-size:14px; color:#666;">Fight for maximum settlement or take it to trial.</p>
-        </div>
-        <div class="step fade-on-scroll">
-          <div class="step-number">4</div>
-          <h4>You Get Paid</h4>
-          <p style="font-size:14px; color:#666;">No fees unless we win. Period.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="section testimonials" id="testimonials">
-    <div class="container">
-      <h2 class="section-title">Real Clients. Real Results.</h2>
-      <div class="carousel">
-        <div class="testimonial-slide active">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-text">"After my truck accident, I couldn't work for months. RoadRight got me $1.2M and covered all my medical bills. They truly care."</p>
-          <small>— Marcus T., Car Accident Client</small>
-        </div>
-        <div class="testimonial-slide">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-text">"The hospital said it was 'just a complication.' RoadRight proved malpractice and secured compensation for my child's lifelong care."</p>
-          <small>— Elena R., Medical Malpractice</small>
-        </div>
-        <div class="testimonial-slide">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-text">"Slipped on ice outside a store. They handled everything — I focused on recovery. Got a fair settlement in 4 months."</p>
-          <small>— David K., Slip & Fall</small>
-        </div>
-        <div class="carousel-controls">
-          <span class="carousel-dot active" data-slide="0"></span>
-          <span class="carousel-dot" data-slide="1"></span>
-          <span class="carousel-dot" data-slide="2"></span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section" id="contact" style="background: var(--light);">
-    <div class="container">
-      <h2 class="section-title">Get Your Free Case Evaluation</h2>
-      <div class="contact-grid">
-        <div>
-          <form class="form" id="consultationForm" action="https://formspree.io/f/your-id" method="POST" novalidate>
-            <div class="form-success" id="formSuccess">
-              ✓ Thank you! An attorney will call you within 2 hours.
-            </div>
-            <input type="text" name="name" placeholder="Full Name *" required data-error="Please enter your name">
-            <div class="error" id="nameError"></div>
-            
-            <input type="tel" name="phone" placeholder="Phone Number *" required pattern="[0-9\-\+\(\)\s]{10,}" data-error="Please enter a valid phone">
-            <div class="error" id="phoneError"></div>
-            
-            <input type="email" name="email" placeholder="Email Address" >
-            
-            <select name="injury_type" required data-error="Please select injury type">
-              <option value="">Type of Injury *</option>
-              <option value="car-accident">Car/Truck Accident</option>
-              <option value="motorcycle">Motorcycle Accident</option>
-              <option value="slip-fall">Slip & Fall</option>
-              <option value="medical">Medical Malpractice</option>
-              <option value="workplace">Workplace Injury</option>
-              <option value="wrongful-death">Wrongful Death</option>
-              <option value="other">Other</option>
-            </select>
-            <div class="error" id="injuryError"></div>
-            
-            <textarea name="details" rows="4" placeholder="Briefly describe what happened *" required data-error="Please describe the incident"></textarea>
-            <div class="error" id="detailsError"></div>
-            
-            <button type="submit" class="btn" style="width:100%;">🆓 Get My Free Evaluation</button>
-            <p style="font-size:12px; color:#666; margin-top:15px; text-align:center;">
-              🔒 100% Confidential • No obligation • No win, no fee
-            </p>
-          </form>
-        </div>
-        <div>
-          <div style="background:white; padding:25px; border-radius:10px; box-shadow: var(--shadow);">
-            <h3 style="font-family:'Playfair Display'; margin-bottom:20px;">🚨 Injured Right Now?</h3>
-            <p style="margin-bottom:20px;"><strong>Call our 24/7 Emergency Line:</strong></p>
-            <a href="tel:+18005551234" style="display:block; font-size:24px; font-weight:600; color:var(--primary); margin-bottom:20px;">(800) 555-1234</a>
-            
-            <div style="border-top:1px solid #eee; padding-top:20px;">
-              <p><strong>📍 Office:</strong><br>123 Justice Blvd, Suite 900<br>Chicago, IL 60601</p>
-              <p style="margin-top:15px;"><strong>🕐 Available:</strong><br>24/7 for emergencies<br>Mon-Fri 8AM-8PM for consultations</p>
-            </div>
-            
-            <div class="emergency-banner">
-              ⚠️ Don't talk to insurance adjusters before speaking with us. They record calls to minimize your claim.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>RoadRight Law</h4>
-          <p style="opacity:0.9; line-height:1.8;">Fighting for injured people across the United States. No win, no fee. Ever.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Practice Areas</h4>
-          <ul>
-            <li><a href="#">Car Accidents</a></li>
-            <li><a href="#">Truck Accidents</a></li>
-            <li><a href="#">Medical Malpractice</a></li>
-            <li><a href="#">Workplace Injuries</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li>📞 (800) 555-1234</li>
-            <li>📧 help@roadrightlaw.com</li>
-            <li>📍 Chicago, IL</li>
-          </ul>
-        </div>
-      </div>
-      <p style="text-align:center; opacity:0.7; font-size:13px;">
-        &copy; <span id="year"></span> RoadRight Law. All Rights Reserved.<br>
-        <small style="opacity:0.6;">Attorney Advertising. Prior results do not guarantee a similar outcome.</small>
-      </p>
-    </div>
-  </footer>
-
-  <!-- FLOATING ELEMENTS -->
-  <a href="tel:+18005551234" class="sticky-call" id="stickyCall">
-    🚨 Call 24/7: (800) 555-1234
-  </a>
-
-  <div class="chat-widget">
-    <button class="chat-toggle" id="chatToggle">💬</button>
-    <div class="chat-box" id="chatBox">
-      <div class="chat-header">
-        <span>Live Chat • Injury Help</span>
-        <button class="chat-close" id="chatClose">×</button>
-      </div>
-      <div class="chat-body" id="chatBody">
-        <div class="chat-message bot">
-          Hi, I'm Alex from RoadRight. 👋<br>
-          <strong>Are you or a loved one injured?</strong><br>
-          <small style="color:#666; display:block; margin-top:8px;">I can connect you with an attorney in &lt;5 min</small>
-        </div>
-      </div>
-      <div class="chat-footer">
-        <input type="text" id="chatInput" placeholder="Type your message...">
-        <button id="chatSend">➤</button>
-      </div>
+<section class="section" style="background:#f3f4f6;">
+  <div class="container">
+    <h2>Why Clients Choose Us</h2>
+    <div class="grid">
+      <div class="card">✔️ Confidential & Discreet</div>
+      <div class="card">✔️ Compassionate Approach</div>
+      <div class="card">✔️ Fast Resolution Focus</div>
     </div>
   </div>
+</section>
 
-  <!-- EXIT-INTENT MODAL -->
-  <div class="modal" id="exitModal">
-    <div class="modal-content">
-      <button class="modal-close" id="modalClose">×</button>
-      <h3>⚠️ Wait — Don't Settle for Less</h3>
-      <p style="margin-bottom:20px; color:#555;">
-        Insurance companies often offer lowball settlements within 48 hours. 
-        <strong>Don't accept until you know your case's true value.</strong>
-      </p>
-      <div class="modal-highlight">
-        🎁 Free Guide: "7 Mistakes That Destroy Injury Claims"
-      </div>
-      <form id="modalForm" style="display:flex; flex-direction:column; gap:12px;">
-        <input type="text" placeholder="Your Name" required style="padding:12px; border:1px solid #ddd; border-radius:5px;">
-        <input type="email" placeholder="Your Email" required style="padding:12px; border:1px solid #ddd; border-radius:5px;">
-        <input type="tel" placeholder="Phone (for urgent cases)" style="padding:12px; border:1px solid #ddd; border-radius:5px;">
-        <button type="submit" class="btn" style="width:100%;">📩 Send Me the Free Guide</button>
-      </form>
-      <p style="font-size:12px; color:#999; margin-top:15px;">
-        We never share your info. Unsubscribe anytime.
-      </p>
-    </div>
+<section class="section" id="contact">
+  <div class="container">
+    <h2>Start Your Consultation</h2>
+
+    <form action="https://formspree.io/f/your-id" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Tell us your situation" required></textarea>
+      <button class="btn">Request Consultation</button>
+    </form>
+
+    <p style="font-size:12px;">🔒 100% Confidential</p>
   </div>
+</section>
 
-  <!-- JAVASCRIPT -->
-  <script>
-    // ===== CONTENT MANAGEMENT =====
-    const siteContent = {
-      "hero-title": "Injured? We Fight For Your Maximum Compensation",
-      "hero-subtitle": "Car accidents, slip & falls, medical malpractice — if someone else was at fault, you deserve justice. Free case evaluation in minutes.",
-      "services-title": "We Handle All Injury Cases",
-      "process-title": "How We Get You Paid"
-    };
+<footer>
+  © 2026 Serene Family Law
+</footer>
 
-    // ===== UTILS =====
-    const $ = (sel, ctx = document) => ctx.querySelector(sel);
-    const $$ = (sel, ctx = document) => ctx.querySelectorAll(sel);
-    
-    // ===== GA4 TRACKING =====
-    function trackEvent(eventName, params = {}) {
-      if (typeof gtag !== 'undefined') {
-        gtag('event', eventName, { ...params });
-      }
-      console.log(`[GA4] ${eventName}`, params);
-    }
-
-    // ===== DYNAMIC CONTENT =====
-    function loadContent() {
-      Object.entries(siteContent).forEach(([key, value]) => {
-        const el = $(`[data-content="${key}"]`);
-        if (el) el.textContent = value;
-      });
-    }
-
-    // ===== FADE ON SCROLL =====
-    const fadeObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          fadeObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    
-    function initFadeAnimations() {
-      $$('.fade-on-scroll').forEach(el => fadeObserver.observe(el));
-    }
-
-    // ===== COUNTER ANIMATION =====
-    function animateCounters() {
-      $$('.stat-number').forEach(el => {
-        const target = +el.dataset.count;
-        const isPercent = target === 96;
-        const isMoney = target === 450;
-        const duration = 2000;
-        const increment = target / (duration / 16);
-        let current = 0;
-        
-        const update = () => {
-          current += increment;
-          if (current < target) {
-            el.textContent = isMoney 
-              ? '$' + Math.floor(current) 
-              : Math.floor(current).toLocaleString();
-            requestAnimationFrame(update);
-          } else {
-            el.textContent = isMoney 
-              ? '$' + target + 'M' 
-              : isPercent 
-                ? target + '%' 
-                : target.toLocaleString() + (target > 100 ? '+' : '');
-          }
-        };
-        
-        const obs = new IntersectionObserver((entries) => {
-          if (entries[0].isIntersecting) { update(); obs.disconnect(); }
-        }, { threshold: 0.5 });
-        obs.observe(el);
-      });
-    }
-
-    // ===== NAV & STICKY CALL =====
-    function initNav() {
-      window.addEventListener('scroll', () => {
-        const stickyCall = $('#stickyCall');
-        if (window.innerWidth <= 768) {
-          if (window.scrollY > 300) stickyCall.classList.add('show');
-          else stickyCall.classList.remove('show');
-        }
-      });
-    }
-
-    // ===== TESTIMONIAL CAROUSEL =====
-    function initCarousel() {
-      const slides = $$('.testimonial-slide');
-      const dots = $$('.carousel-dot');
-      let current = 0, interval;
-      
-      const showSlide = (index) => {
-        slides.forEach(s => s.classList.remove('active'));
-        dots.forEach(d => d.classList.remove('active'));
-        slides[index].classList.add('active');
-        dots[index].classList.add('active');
-        current = index;
-      };
-      
-      const nextSlide = () => showSlide((current + 1) % slides.length);
-      
-      dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-          showSlide(+dot.dataset.slide);
-          resetInterval();
-        });
-      });
-      
-      const startInterval = () => interval = setInterval(nextSlide, 6000);
-      const resetInterval = () => { clearInterval(interval); startInterval(); };
-      
-      $('.carousel').addEventListener('mouseenter', () => clearInterval(interval));
-      $('.carousel').addEventListener('mouseleave', startInterval);
-      
-      startInterval();
-    }
-
-    // ===== FORM VALIDATION =====
-    function initForm() {
-      const form = $('#consultationForm');
-      const success = $('#formSuccess');
-      
-      const validateField = (field) => {
-        const errorEl = $(`#${field.name}Error`);
-        const errorMsg = field.dataset.error || 'Required';
-        
-        if (field.required && !field.value.trim()) {
-          errorEl.textContent = errorMsg;
-          errorEl.classList.add('show');
-          return false;
-        }
-        if (field.type === 'email' && field.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) {
-          errorEl.textContent = 'Invalid email';
-          errorEl.classList.add('show');
-          return false;
-        }
-        errorEl?.classList.remove('show');
-        return true;
-      };
-      
-      $$('#consultationForm [required]').forEach(field => {
-        field.addEventListener('blur', () => validateField(field));
-        field.addEventListener('input', () => $(`#${field.name}Error`)?.classList.remove('show'));
-      });
-      
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        let valid = true;
-        $$('#consultationForm [required]').forEach(f => { if(!validateField(f)) valid = false; });
-        if(!valid) return;
-        
-        trackEvent('form_submit', { injury_type: form.querySelector('[name="injury_type"]').value });
-        
-        const btn = form.querySelector('button[type="submit"]');
-        const original = btn.textContent;
-        btn.textContent = 'Sending...';
-        btn.disabled = true;
-        
-        try {
-          await new Promise(r => setTimeout(r, 1500));
-          success.classList.add('show');
-          form.reset();
-          trackEvent('form_success');
-          setTimeout(() => success.classList.remove('show'), 6000);
-        } catch {
-          alert('Error sending. Please call (800) 555-1234 directly.');
-        } finally {
-          btn.textContent = original;
-          btn.disabled = false;
-        }
-      });
-    }
-
-    // ===== CHAT WIDGET =====
-    function initChat() {
-      const toggle = $('#chatToggle'), box = $('#chatBox'), close = $('#chatClose');
-      const input = $('#chatInput'), send = $('#chatSend'), body = $('#chatBody');
-      
-      const toggleChat = () => box.classList.toggle('show');
-      toggle.addEventListener('click', toggleChat);
-      close.addEventListener('click', toggleChat);
-      
-      const addMsg = (text, isBot = false) => {
-        const div = document.createElement('div');
-        div.className = `chat-message ${isBot ? 'bot' : ''}`;
-        div.innerHTML = text;
-        body.appendChild(div);
-        body.scrollTop = body.scrollHeight;
-      };
-      
-      const handleSend = () => {
-        const text = input.value.trim();
-        if(!text) return;
-        addMsg(text);
-        input.value = '';
-        setTimeout(() => {
-          const replies = [
-            "Thanks. An injury specialist will call you within 15 minutes.",
-            "Got it. Are you currently receiving medical treatment?",
-            "We're reviewing your case. Expect a call shortly."
-          ];
-          addMsg(replies[Math.floor(Math.random()*replies.length)], true);
-        }, 1000);
-        trackEvent('chat_sent');
-      };
-      
-      send.addEventListener('click', handleSend);
-      input.addEventListener('keypress', e => { if(e.key==='Enter') handleSend(); });
-    }
-
-    // ===== EXIT MODAL =====
-    function initExitModal() {
-      const modal = $('#exitModal'), close = $('#modalClose'), form = $('#modalForm');
-      let shown = false;
-      
-      const show = () => { if(shown) return; modal.classList.add('show'); shown = true; trackEvent('exit_modal'); };
-      
-      document.addEventListener('mouseleave', e => { if(e.clientY<=0 && window.innerWidth>768) show(); });
-      setTimeout(() => { if(!shown && document.visibilityState==='visible') show(); }, 35000);
-      
-      close.addEventListener('click', () => { modal.classList.remove('show'); trackEvent('exit_modal_close'); });
-      modal.addEventListener('click', e => { if(e.target===modal) modal.classList.remove('show'); });
-      
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        trackEvent('exit_guide_download');
-        form.innerHTML = `<div style="padding:30px;"><div style="font-size:40px;margin-bottom:15px;">✓</div><strong>Check your email!</strong><br><small style="color:#666;">Your free guide is on the way.</small></div>`;
-      });
-    }
-
-    // ===== INIT =====
-    document.addEventListener('DOMContentLoaded', () => {
-      $('#year').textContent = new Date().getFullYear();
-      loadContent();
-      initFadeAnimations();
-      animateCounters();
-      initNav();
-      initCarousel();
-      initForm();
-      initChat();
-      initExitModal();
-      trackEvent('page_view', { niche: 'personal_injury' });
-    });
-  </script>
 </body>
 </html>
